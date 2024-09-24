@@ -119,7 +119,7 @@ function init() {
   // main.js:73 Camera position: X: 9.486655843772935, Y: -0.1485990386513403, Z: 3.1593162594968143
   // main.js:73 Camera position: X: 7.006611381524364, Y: -1.1529766301487419, Z: 7.041167647388049
 
-  window.addEventListener("click", function () {
+  window.addEventListener("DOMContentLoaded", function () {
     switch (position) {
       case 0:
         cameraMovement(-8.17, 9.99, 0.0);
