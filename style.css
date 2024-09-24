@@ -432,3 +432,10 @@ canvas {
 #audio_controls button:hover {
   background-color: rgba(52, 58, 125, 0.8);
 }
+
+@media (max-width: 450px) {
+  video {
+    width: 100vw;
+    height: 200vh;
+  }
+}

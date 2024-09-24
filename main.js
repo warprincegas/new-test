@@ -61,15 +61,15 @@ function init() {
   videoTexture.format = THREE.RGBFormat;
 
   // 8. Add OrbitControls to control camera movement
-  // const controls = new OrbitControls(camera, renderer.domElement);
-  // controls.enableDamping = true; // Optional: Smooth movement
-  // controls.dampingFactor = 0.05;
-  // controls.screenSpacePanning = false;
-  // controls.minDistance = 10;
-  // controls.maxDistance = 50;
-  // controls.autoRotate = true;
-  // controls.enableZoom = true;
-  // controls.autoRotate = true;
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; // Optional: Smooth movement
+  controls.dampingFactor = 0.05;
+  controls.screenSpacePanning = false;
+  controls.minDistance = 10;
+  controls.maxDistance = 50;
+  controls.autoRotate = true;
+  controls.enableZoom = true;
+  controls.autoRotate = true;
 
   // // Load a font and create the text
   // const loader = new FontLoader();
@@ -120,30 +120,29 @@ function init() {
   // main.js:73 Camera position: X: 7.006611381524364, Y: -1.1529766301487419, Z: 7.041167647388049
 
   window.addEventListener("DOMContentLoaded", function () {
-    switch (position) {
-      case 0:
-        cameraMovement(-8.17, 9.99, 0.0);
-        cameraRotation(-2.75, -1.24, -2.77);
-        position = 1;
-        break;
-
-      case 1:
-        cameraMovement(0.73, 1.35, 9.88);
-        cameraRotation(-3.12, 0.22, 3.13);
-        position = 2;
-        break;
-
-      case 2:
-        cameraMovement(-2.13, 1.56, -9.64);
-        cameraRotation(0.44, 1.43, -0.44);
-        position = 3;
-
-      case 3:
-        cameraMovement(9.48, -0.14, 3.15);
-        cameraRotation(0.44, 1.43, -0.44);
-        position = 0;
-    }
+    // cameraMovement(-8.17, 9.99, 0.0);
+    // cameraRotation(-2.75, -1.24, -2.77);
+    // cameraMovement(0.73, 1.35, 9.88);
+    // cameraRotation(-3.12, 0.22, 3.13);
+    // cameraMovement(-2.13, 1.56, -9.64);
+    // cameraRotation(0.44, 1.43, -0.44);
+    // cameraMovement(9.48, -0.14, 3.15);
+    // cameraRotation(0.44, 1.43, -0.44);
   });
+
+  // Variables to track cursor movement
+  let mouseX = 0,
+    mouseY = 0;
+
+  // Update camera rotation based on cursor position
+  function onMouseMove(event) {
+    // Normalize the mouse position (range: -1 to 1)
+    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+    mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+  }
+
+  // Add the event listener for cursor movement
+  window.addEventListener("mousemove", onMouseMove);
 
   // Handle window resizing
   window.addEventListener("resize", onWindowResize, false);
