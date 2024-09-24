@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>360 Video with Three.js</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+    <script type="module" crossorigin src="/new-test/assets/index-CShX_IHc.js"></script>
+    <link rel="stylesheet" crossorigin href="/new-test/assets/index-DCQnkybG.css">
+  </head>
+  <body>
+    <!-- <canvas class="webgl"></canvas>
+    <nav>
+      <a href="#">Sphere</a>
+      <ul>
+        <li>Create</li>
+        <li>Explore</li>
+      </ul>
+    </nav>
+    <h1 class="title">Give it spin</h1> -->
+
+    <video id="video360" muted playsinline>
+      <source src="put.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- <section>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+        debitis, dolore impedit, nostrum reprehenderit deserunt assumenda illum
+        eveniet, odit ducimus voluptatibus pariatur laborum porro. Molestias ea
+        quaerat necessitatibus tenetur.
+      </p>
+      <span>Please Work na</span>
+    </section> -->
+    <!-- <video id="video" autoplay muted loop playsinline style="display: none">
+      <source src="Crushed rock.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video> -->
+
+    <!-- <div class="sketchfab-embed-wrapper">
+      <iframe
+        title="La Galerie des Glaces"
+        frameborder="0"
+        allowfullscreen
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        xr-spatial-tracking
+        execution-while-out-of-viewport
+        execution-while-not-rendered
+        web-share
+        src="https://sketchfab.com/models/d06415253af04077a82e056282173b65/embed"
+      >
+      </iframe>
+    </div> -->
+
+  </body>
+</html>
